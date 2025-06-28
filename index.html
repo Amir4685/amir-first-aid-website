@@ -5,79 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>אמיר מציל חיים - סדנאות עזרה ראשונה</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background-color: #f5f5f5; color: #333; }
-    header { background-color: #d32f2f; color: white; padding: 20px; text-align: center; }
-    section { padding: 30px; max-width: 900px; margin: auto; }
-    .cta { background-color: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center; }
-    .cta a { background-color: #d32f2f; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
-    .packages { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .package { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .reviews { background-color: #eeeeee; padding: 20px; border-radius: 8px; }
-    .review { background: white; margin-bottom: 10px; padding: 10px; border-radius: 6px; }
-    footer { text-align: center; padding: 10px; font-size: 14px; background-color: #c62828; color: white; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff; color: #333; scroll-behavior: smooth; }
+    header { background: linear-gradient(to right, #d32f2f, #b71c1c); color: white; padding: 60px 20px; text-align: center; position: relative; overflow: hidden; }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1576765607924-b6740ceafd2b');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    header h1, header p { position: relative; z-index: 1; }
+
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .intro { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .intro img { width: 220px; border-radius: 50%; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+    .video-section video { width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 30px; }
+
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd');
+      height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+    .package { background: #fafafa; border-radius: 12px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: 0.3s; }
+    .package:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+
+    .cta { background-color: #ffebee; padding: 40px 20px; border-radius: 10px; text-align: center; margin-top: 60px; }
+    .cta a { background-color: #d32f2f; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1em; }
+
+    .form-section { background-color: #f3f3f3; padding: 40px; border-radius: 10px; margin-top: 40px; }
+    form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
+    input, textarea { padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
+    button { padding: 14px; border: none; background-color: #d32f2f; color: white; border-radius: 6px; cursor: pointer; font-size: 1em; }
+
+    .reviews { background-color: #eeeeee; padding: 30px; border-radius: 12px; margin-top: 60px; }
+    .review { background: white; margin-bottom: 20px; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+    footer { text-align: center; padding: 20px; font-size: 14px; background-color: #b71c1c; color: white; margin-top: 60px; }
   </style>
 </head>
 <body>
   <header>
     <h1>אמיר מציל חיים</h1>
-    <p>סדנאות עזרה ראשונה מקצועיות לכל גיל</p>
+    <p>הדרכות עזרה ראשונה מקצועיות, מרתקות ומצילות חיים – מותאמות אישית אליך</p>
   </header>
 
-  <section>
-    <h2>מי אני?</h2>
-    <p>שמי אמיר, חובש בכיר, מדריך רפואת חירום מוסמך, בוגר מד"א ופעיל בתחנת ראשון לציון. אני כאן כדי ללמד אתכם להציל חיים - בדרך ברורה, חווייתית ומקצועית.</p>
+  <section class="intro">
+    <h2>נעים מאוד</h2>
+    <p>אני אמיר, מדריך רפואת חירום מוסמך ויזם חברתי. אחרי מאות שעות באמבולנסים ואלפי משתתפים בסדנאות – אני כאן כדי ללמד אתכם להציל חיים בצורה הכי פרקטית, מרתקת ואמיתית שיש.</p>
+    <img src="https://images.unsplash.com/photo-1603398031226-cbb0f4be7c9d" alt="אמיר מדריך רפואת חירום">
   </section>
 
-  <section class="cta">
-    <h2>רוצים סדנה אצלכם?</h2>
-    <p>בחרו את החבילה המתאימה לכם או דברו איתי בקליק דרך ווטסאפ!</p>
-    <a href="https://wa.me/972xxxxxxxxx" target="_blank">דברו איתי בווטסאפ</a>
+  <section class="video-section">
+    <h2>קצת מהשטח</h2>
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      הדפדפן שלך לא תומך בווידאו
+    </video>
   </section>
 
+  <div class="parallax"></div>
+
   <section>
-    <h2>חבילות הדרכה</h2>
+    <h2>סוגי הסדנאות שאפשר להזמין</h2>
     <div class="packages">
       <div class="package">
-        <h3>לבתי ספר</h3>
-        <p>הדרכה חווייתית ומותאמת לגילאי נוער. כולל תרגולים וערכות הדגמה. מתאים ל-1–4 כיתות.</p>
-        <p><strong>מחיר: החל מ-1,500 ש"ח</strong></p>
+        <h3>בתי ספר ותיכונים</h3>
+        <p>הדרכה מרתקת לכיתות ז'-יב'. תרגולים מעשיים ומצילי חיים לתלמידים ומורים.</p>
+        <strong>מ-1,500 ש"ח</strong>
       </div>
       <div class="package">
-        <h3>לבנייני מגורים</h3>
-        <p>הדרכה לשכונה או בניין – חוויה קהילתית ולמידה פרקטית לכל המשפחה.</p>
-        <p><strong>מחיר: החל מ-1,800 ש"ח</strong></p>
+        <h3>בנייני מגורים / שכונות</h3>
+        <p>ערב קהילתי חווייתי – תרגול פצועים, חנק, מצבים רפואיים יומיומיים.</p>
+        <strong>מ-1,800 ש"ח</strong>
       </div>
       <div class="package">
-        <h3>להורים טריים</h3>
-        <p>איך להתמודד עם חנק, כוויות, חבלות ותינוקות – בשפה פשוטה ועם תרגול מעשי.</p>
-        <p><strong>מחיר: החל מ-999 ש"ח</strong></p>
+        <h3>הורים טריים</h3>
+        <p>מה עושים כשנחנק תינוק? איך מגיבים בזמן אמת בבית? הדרכה בשפה ברורה ונגישה.</p>
+        <strong>999 ש"ח</strong>
       </div>
       <div class="package">
-        <h3>סדנה מותאמת אישית</h3>
-        <p>רוצים משהו מיוחד? שיחה אישית נפתחת בלחיצה!</p>
-        <p><strong><a href="https://wa.me/972xxxxxxxxx" target="_blank">דברו איתי עכשיו</a></strong></p>
+        <h3>מקומות עבודה</h3>
+        <p>הדרכת עזרה ראשונה לעובדים – כולל תרגול מצבי חירום רלוונטיים לתחום העבודה.</p>
+        <strong>מ-1,700 ש"ח</strong>
+      </div>
+      <div class="package">
+        <h3>קהילות וארגוני נוער</h3>
+        <p>מותאם לקבוצות נוער, מדריכים, תנועות ומכינות. חינוך לחיים אמיתיים.</p>
+        <strong>1,500 ש"ח</strong>
+      </div>
+      <div class="package">
+        <h3>הרצאה בהתאמה אישית</h3>
+        <p>פגישה מקדימה קצרה, והתאמה מלאה לתכנים שהכי רלוונטיים לכם.</p>
+        <strong><a href="https://wa.me/972xxxxxxxxx" target="_blank">לחצו כאן</a></strong>
       </div>
     </div>
+  </section>
+
+  <section class="form-section">
+    <h2>רוצים שנחזור אליכם?</h2>
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="email" name="email" placeholder="אימייל ליצירת קשר" required>
+      <textarea name="message" rows="4" placeholder="מה מעניין אתכם?"></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">שלחו פנייה</button>
+    </form>
   </section>
 
   <section class="reviews">
-    <h2>מה אנשים אומרים?</h2>
+    <h2>מה מספרים עליי?</h2>
     <div class="review">
-      <strong>נועה ★★★★★</strong>
-      <p>הדרכה מדהימה, מעשית ועם אווירה טובה. למדתי המון!</p>
+      <strong>הילה ★★★★★</strong>
+      <p>הסדנה הכי מקצועית שראיתי. כולם נשארו מרותקים!</p>
     </div>
     <div class="review">
-      <strong>דניאל ★★★★★</strong>
-      <p>הסדנה הכי מקצועית שראינו בבניין שלנו – ממליץ בחום.</p>
+      <strong>יונתן ★★★★★</strong>
+      <p>העובדים שלי יצאו עם ידע וביטחון. זה שווה זהב!</p>
     </div>
     <div class="review">
-      <strong>שירה ★★★★☆</strong>
-      <p>אמיר מעביר את החומר בשיא הברור. רק חבל שלא היה יותר זמן!</p>
+      <strong>מאיה ★★★★☆</strong>
+      <p>המון ידע בשעה אחת. הייתי שמחה לעוד!</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 אמיר מציל חיים | אתר תדמית באהבה ❤
+    &copy; 2025 אמיר מציל חיים | אתר תדמית מקצועי • נבנה באהבה ❤
   </footer>
 </body>
 </html>
