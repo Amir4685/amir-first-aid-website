@@ -22,13 +22,10 @@
       z-index: 0;
     }
     header h1, header p { position: relative; z-index: 1; }
-
     section { padding: 60px 20px; max-width: 1000px; margin: auto; }
     .intro { display: flex; flex-direction: column; align-items: center; text-align: center; }
     .intro img { width: 220px; border-radius: 50%; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-
     .video-section video { width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 30px; }
-
     .parallax {
       background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd');
       height: 400px;
@@ -37,22 +34,17 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-
     .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
     .package { background: #fafafa; border-radius: 12px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: 0.3s; }
     .package:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
-
     .cta { background-color: #ffebee; padding: 40px 20px; border-radius: 10px; text-align: center; margin-top: 60px; }
     .cta a { background-color: #d32f2f; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-size: 1.1em; }
-
     .form-section { background-color: #f3f3f3; padding: 40px; border-radius: 10px; margin-top: 40px; }
     form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
     input, textarea { padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
     button { padding: 14px; border: none; background-color: #d32f2f; color: white; border-radius: 6px; cursor: pointer; font-size: 1em; }
-
     .reviews { background-color: #eeeeee; padding: 30px; border-radius: 12px; margin-top: 60px; }
     .review { background: white; margin-bottom: 20px; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-
     footer { text-align: center; padding: 20px; font-size: 14px; background-color: #b71c1c; color: white; margin-top: 60px; }
   </style>
 </head>
@@ -64,12 +56,14 @@
 
   <section class="intro">
     <h2>נעים מאוד</h2>
-    <p>אני אמיר, מדריך רפואת חירום מוסמך ויזם חברתי. אחרי מאות שעות באמבולנסים ואלפי משתתפים בסדנאות – אני כאן כדי ללמד אתכם להציל חיים בצורה הכי פרקטית, מרתקת ואמיתית שיש.</p>
-    <img src="https://drive.google.com/file/d/1CF2Xmce7x_tRzbofO4-etIBINP1LNY0a/view?usp=sharing" alt="אמיר מדריך רפואת חירום">
+    <p>אני אמיר, מדריך רפואת חירום מוסמך ויזם חברתי...</p>
+    <!-- 👇 החלף את הקישור הזה לתמונה אמיתית שלך -->
+    <img src="https://images.unsplash.com/photo-1603398031226-cbb0f4be7c9d" alt="אמיר מדריך רפואת חירום">
   </section>
 
   <section class="video-section">
     <h2>קצת מהשטח</h2>
+    <!-- 👇 החלף את הקישור הזה לווידאו שלך מ־Drive, Streamable או Vimeo -->
     <video controls>
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
       הדפדפן שלך לא תומך בווידאו
@@ -81,42 +75,21 @@
   <section>
     <h2>סוגי הסדנאות שאפשר להזמין</h2>
     <div class="packages">
-      <div class="package">
-        <h3>בתי ספר ותיכונים</h3>
-        <p>הדרכה מרתקת לכיתות ז'-יב'. תרגולים מעשיים ומצילי חיים לתלמידים ומורים.</p>
-        <strong>מ-1,500 ש"ח</strong>
-      </div>
-      <div class="package">
-        <h3>בנייני מגורים / שכונות</h3>
-        <p>ערב קהילתי חווייתי – תרגול פצועים, חנק, מצבים רפואיים יומיומיים.</p>
-        <strong>מ-1,800 ש"ח</strong>
-      </div>
-      <div class="package">
-        <h3>הורים טריים</h3>
-        <p>מה עושים כשנחנק תינוק? איך מגיבים בזמן אמת בבית? הדרכה בשפה ברורה ונגישה.</p>
-        <strong>999 ש"ח</strong>
-      </div>
-      <div class="package">
-        <h3>מקומות עבודה</h3>
-        <p>הדרכת עזרה ראשונה לעובדים – כולל תרגול מצבי חירום רלוונטיים לתחום העבודה.</p>
-        <strong>מ-1,700 ש"ח</strong>
-      </div>
-      <div class="package">
-        <h3>קהילות וארגוני נוער</h3>
-        <p>מותאם לקבוצות נוער, מדריכים, תנועות ומכינות. חינוך לחיים אמיתיים.</p>
-        <strong>1,500 ש"ח</strong>
-      </div>
-      <div class="package">
-        <h3>הרצאה בהתאמה אישית</h3>
-        <p>פגישה מקדימה קצרה, והתאמה מלאה לתכנים שהכי רלוונטיים לכם.</p>
-        <strong><a href="https://wa.me/972xxxxxxxxx" target="_blank">לחצו כאן</a></strong>
-      </div>
+      <!-- חבילות מגוונות שאתה יכול להחליף או למחוק -->
+      <div class="package"><h3>בתי ספר ותיכונים</h3><p>הדרכה מעשית ומרגשת לתלמידים.</p><strong>מ-1,500 ש\"ח</strong></div>
+      <div class="package"><h3>בנייני מגורים</h3><p>פעילות קהילתית עם הדגמות בשטח.</p><strong>מ-1,800 ש\"ח</strong></div>
+      <div class="package"><h3>הורים טריים</h3><p>מה לעשות כשקורה משהו בבית עם תינוק?</p><strong>999 ש\"ח</strong></div>
+      <div class="package"><h3>מקומות עבודה</h3><p>תרגול מצבי חירום רלוונטיים לצוות.</p><strong>מ-1,700 ש\"ח</strong></div>
+      <div class="package"><h3>תנועות נוער / מכינות</h3><p>נוער לומד להציל חיים.</p><strong>1,500 ש\"ח</strong></div>
+      <!-- 👇 כאן קישור מותאם לשיחה איתך בווטסאפ -->
+      <div class="package"><h3>התאמה אישית</h3><p>שיחה אישית והדרכה לפי הצורך.</p><strong><a href="https://wa.me/972XXXXXXXXX" target="_blank">לחצו כאן</a></strong></div>
     </div>
   </section>
 
   <section class="form-section">
     <h2>רוצים שנחזור אליכם?</h2>
-    <form action="https://formsubmit.co/amirai4685@email.com" method="POST">
+    <!-- 👇 שנה כאן את כתובת המייל שלך -->
+    <form action="https://formsubmit.co/YOUR@EMAIL.COM" method="POST">
       <input type="text" name="name" placeholder="שם מלא" required>
       <input type="email" name="email" placeholder="אימייל ליצירת קשר" required>
       <textarea name="message" rows="4" placeholder="מה מעניין אתכם?"></textarea>
@@ -127,18 +100,9 @@
 
   <section class="reviews">
     <h2>מה מספרים עליי?</h2>
-    <div class="review">
-      <strong>הילה ★★★★★</strong>
-      <p>הסדנה הכי מקצועית שראיתי. כולם נשארו מרותקים!</p>
-    </div>
-    <div class="review">
-      <strong>יונתן ★★★★★</strong>
-      <p>העובדים שלי יצאו עם ידע וביטחון. זה שווה זהב!</p>
-    </div>
-    <div class="review">
-      <strong>מאיה ★★★★☆</strong>
-      <p>המון ידע בשעה אחת. הייתי שמחה לעוד!</p>
-    </div>
+    <div class="review"><strong>הילה ★★★★★</strong><p>הסדנה הכי מקצועית שראיתי. כולם נשארו מרותקים!</p></div>
+    <div class="review"><strong>יונתן ★★★★★</strong><p>העובדים שלי יצאו עם ידע וביטחון. זה שווה זהב!</p></div>
+    <div class="review"><strong>מאיה ★★★★☆</strong><p>המון ידע בשעה אחת. הייתי שמחה לעוד!</p></div>
   </section>
 
   <footer>
