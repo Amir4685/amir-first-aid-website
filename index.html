@@ -3,209 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>אמיר מציל חיים | הדרכות עזרה ראשונה</title>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>הדרכות עזרה ראשונה - אמיר מציל חיים</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Heebo', sans-serif;
-      background-color: #0f1c2e;
-      color: #fff;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #0f172a;
+      color: white;
+      scroll-behavior: smooth;
     }
     header {
-      position: relative;
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1606813902234-6df66f6deae6') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      padding: 100px 20px 60px;
       text-align: center;
+      animation: fadeIn 1.8s ease-in-out;
     }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(15, 28, 46, 0.8);
-      z-index: 1;
-    }
-    header .content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #fff;
+      font-size: 48px;
+      margin: 0 0 20px;
     }
     header p {
-      font-size: 1.4rem;
-      color: #e0e0e0;
+      font-size: 22px;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-inline: auto;
     }
-    nav {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      background-color: rgba(15, 28, 46, 0.9);
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      z-index: 3;
+    .form-container {
+      background-color: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
-    nav h2 {
-      color: #fff;
-      font-weight: 900;
-      font-size: 1.5rem;
+    form {
+      display: grid;
+      gap: 15px;
     }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
+    input, select {
+      padding: 14px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: none;
     }
-    nav ul li a {
-      color: #f1f1f1;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav ul li a:hover {
-      color: #ff5252;
+    button {
+      background-color: #9333ea;
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
     }
     section {
       padding: 80px 20px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 60px;
-      color: #ffccbc;
-      position: relative;
-    }
-    .section-title::after {
-      content: '';
-      width: 60px;
-      height: 4px;
-      background-color: #ff5252;
-      display: block;
-      margin: 10px auto 0;
+    .about img {
+      width: 160px;
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-    .service-card {
-      background-color: #1c2b42;
-      border-radius: 16px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
+    .card {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.05);
     }
-    .service-card:hover {
-      transform: translateY(-10px);
+    .features ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
     }
-    .service-card img {
-      width: 80px;
-      margin-bottom: 20px;
+    .features li::before {
+      content: "✅ ";
     }
-    .service-card h3 {
-      margin-bottom: 10px;
-      color: #fff;
-    }
-    .service-card p {
-      color: #bbb;
-    }
-    .cta {
-      text-align: center;
-      background-color: #ff5252;
-      padding: 50px 20px;
-      color: #fff;
-      font-size: 1.8rem;
-      font-weight: bold;
-      border-radius: 16px;
-      margin-top: 100px;
-    }
-    footer {
-      background-color: #0a1422;
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+    .back-to-form-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 22px;
+      background-color: #9333ea;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <h2>אמיר מציל חיים</h2>
-    <ul>
-      <li><a href="#services">שירותים</a></li>
-      <li><a href="#about">אודות</a></li>
-      <li><a href="#contact">צור קשר</a></li>
-    </ul>
-  </nav>
-  <header>
-    <div class="content">
-      <h1>הדרכות עזרה ראשונה לכל גיל</h1>
-      <p>סדנאות שיכולות להציל חיים - בגובה העיניים, מהלב.</p>
+
+  <header id="top">
+    <h1>הדרכות עזרה ראשונה - אמיר מציל חיים</h1>
+    <p>הדרכות עזרה ראשונה לכל גיל, סדנאות שיכולות להציל חיים - בגובה העיניים, ומהלב</p>
+    <div class="form-container">
+      <form action="https://formsubmit.co/amir@email.com" method="POST">
+        <input type="text" name="name" placeholder="איך קוראים לך?" required>
+        <input type="email" name="email" placeholder="מה המייל שלך?" required>
+        <input type="tel" name="phone" placeholder="מה המספר שלך?" required>
+        <select name="time">
+          <option disabled selected>מתי לחזור אליך?</option>
+          <option>8:00 - 12:00</option>
+          <option>12:00 - 16:00</option>
+          <option>16:00 - 19:00</option>
+        </select>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit">בוא נדבר על הדרכה עבורי</button>
+      </form>
     </div>
   </header>
-  <section id="services">
-    <h2 class="section-title">השירותים שלי</h2>
+
+  <section class="about">
+    <h2>קצת עליי</h2>
+    <p>אני אמיר, מתנדב בתחנת מד"א ראשון לציון, חובש רפואת חירום מוסמך ומדריך רשמי של מד"א. מדריך עשרות מגישי עזרה ראשונה, כולל הכשרות עיוניות ותרגולים מעשיים – מתוך שליחות אמיתית.</p>
+    <img src="PHOTO-2025-02-10-08-51-11.jpg" alt="אמיר מדריך רפואת חירום">
+  </section>
+
+  <section>
+    <h2>הדרכות לדוגמה</h2>
     <div class="services">
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/943/943398.png" alt="icon" />
-        <h3>סדנאות לבתי ספר</h3>
-        <p>הדרכות לתלמידים עם תרגולים בשטח - חווייתי ומקצועי.</p>
+      <div class="card">
+        <h3>הדרכות למקומות עבודה</h3>
+        <p>תרחישים מציאותיים ותרגולים עם הצוות – חוויה מגבשת ומצילה חיים.</p>
       </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1640/1640865.png" alt="icon" />
-        <h3>הרצאות להורים</h3>
-        <p>מענה מיידי למצבים מסכני חיים - במיוחד לתינוקות וילדים.</p>
+      <div class="card">
+        <h3>הדרכות בבניין מגורים</h3>
+        <p>הדרכות קהילתיות מותאמות לכל גיל – לובי, גינה, או אולם.</p>
       </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4011/4011404.png" alt="icon" />
-        <h3>סדנאות למקומות עבודה</h3>
-        <p>שיפור ביטחון הצוות - עם ידע פרקטי וציוד מותאם.</p>
+      <div class="card">
+        <h3>סדנאות להורים טריים</h3>
+        <p>הבנה ותרגול של מצבי חירום עם תינוקות וילדים – בגובה העיניים.</p>
+      </div>
+      <div class="card">
+        <h3>חוגים בבתי ספר</h3>
+        <p>סדנאות חווייתיות לילדים ונוער – כחלק ממערך החינוך לחיים.</p>
       </div>
     </div>
   </section>
-  <section id="about">
-    <h2 class="section-title">קצת עליי</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto; color: #ccc; font-size: 1.1rem">
-      אני אמיר, מדריך רפואת חירום מוסמך במד"א, עם ניסיון של מאות שעות באמבולנס ואלפי משתתפים בסדנאות.
-      המטרה שלי היא אחת – ללמד כל אחד ואחת מכם איך להציל חיים באמת. כל סדנה מועברת בגובה העיניים,
-      מותאמת אישית לקהל היעד וכוללת תרגול מעשי. בואו נציל חיים – ביחד.
-    </p>
+
+  <section class="features">
+    <h2>מה לומדים בהדרכה?</h2>
+    <ul>
+      <li>החייאת רחוב (מבוגר/ילד/תינוק)</li>
+      <li>טביעות מים</li>
+      <li>חנק מגוף זר</li>
+      <li>עילפון וסימני אזהרה</li>
+      <li>חבלות, פציעות ומניעת זיהום</li>
+      <li>ועוד נושאים מצילי חיים</li>
+    </ul>
+    <a class="back-to-form-btn" href="#top">רוצה לבדוק הדרכה בקרוב</a>
   </section>
-  <section id="contact">
-    <h2 class="section-title">צור קשר</h2>
-    <div class="cta">
-      רוצו להציל חיים? <br>
-      דברו איתי עכשיו בוואטסאפ:
-      <br><br>
-      <a href="https://wa.me/972501234567" style="color: #fff; text-decoration: underline;">שלח הודעה</a>
-    </div>
-  </section>
-  <footer>
-    &copy; 2025 אמיר מציל חיים - כל הזכויות שמורות
-  </footer>
+
 </body>
 </html>
-
