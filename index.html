@@ -2,9 +2,9 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הדרכות עזרה ראשונה - אמיר מציל חיים</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -16,19 +16,20 @@
     header {
       padding: 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
     .logo {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      overflow: hidden;
+      background-color: white;
     }
     .logo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 50%;
     }
     .whatsapp-btn {
       position: fixed;
@@ -49,16 +50,14 @@
       height: 30px;
     }
     .hero {
-      text-align: center;
-      padding: 4rem 2rem;
       position: relative;
+      padding: 4rem 2rem;
       overflow: hidden;
     }
     .hero::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       background: url('https://www.videvo.net/videvo_files/converted/2014_05/preview/MedicalEmergencyHospital1Videvo.mov22877.webm') no-repeat center center/cover;
@@ -99,18 +98,113 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .section {
+      padding: 3rem 2rem;
+    }
+    .about img {
+      display: block;
+      max-width: 300px;
+      margin: 1rem auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px white;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-icons a img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px white;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #333;
+      padding: 1rem;
+      border-radius: 15px;
+      width: 280px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      perspective: 1000px;
+    }
+    .card:hover {
+      transform: scale(1.1) rotateY(10deg);
+      box-shadow: 0 8px 20px rgba(255, 77, 136, 0.4);
+    }
+    .before-after-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .arrow {
+      font-size: 4rem;
+      color: white;
+      animation: bounce 1.5s infinite;
+      text-shadow: 0 0 20px #fff;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .thought-box {
+      width: 320px;
+      padding: 2rem;
+      background-color: #f8f8f8;
+      border-radius: 20px;
+      color: black;
+      position: relative;
+    }
+    .thought-box h3 {
+      margin-top: 0;
+    }
+    .thought {
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 20px;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-weight: bold;
+      position: relative;
+    }
+    .thought.good {
+      background-color: #2ecc71;
+      color: #000;
+      text-shadow: 0 0 5px #fff;
+    }
+    .scroll-to-form {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background: linear-gradient(to right, #ff4d88, #a64dff);
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="20250629_1423_Magen David Logo_simple_compose_01jyxpret2fxmvwchngtbhw937.png" alt="Logo">
+      <img src="20250629_1423_Magen David Logo_simple_compose_01jyxpret2fxmvwchngtbhw937.png" alt="לוגו">
     </div>
   </header>
+
   <a class="whatsapp-btn" href="https://wa.me/972501234567" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="צ'אט ואטסאפ">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="וואטסאפ">
   </a>
-  <section class="hero">
+
+  <section class="hero" id="form">
     <h1>הדרכות עזרה ראשונה - אמיר מציל חיים</h1>
     <p>הדרכות עזרה ראשונה לכל גיל, סדנאות שיכולות להציל חיים - בגובה העיניים, ומהלב</p>
     <form class="contact-form">
@@ -125,6 +219,52 @@
       </select>
       <button>בוא נדבר על הדרכה עבורי</button>
     </form>
+  </section>
+
+  <section class="section about">
+    <h2>קצת עליי</h2>
+    <p>אני חובש רפואת חירום מוסמך, מדריך רפואה במד"א ראשון לציון עם ניסיון של מעל לשנתיים בהדרכות עיוניות ומעשיות. מכשיר מאות צעירים, נאמני עזרה ראשונה וחובשים בשטח.</p>
+    <img src="PHOTO-2025-02-10-08-51-11.jpg" alt="אמיר במדים">
+    <div class="social-icons">
+      <a href="https://instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"></a>
+      <a href="https://tiktok.com"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png"></a>
+      <a href="https://facebook.com"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png"></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>הדרכות וסדנאות</h2>
+    <div class="cards-container">
+      <div class="card" onclick="alert('פרטים מלאים בהמשך - הדרכה לעובדי משרד')">הדרכה לעובדי משרד<br><img src="https://via.placeholder.com/250x150"><p>התמודדות עם מצבי חירום בסביבה משרדית</p></div>
+      <div class="card" onclick="alert('פרטים מלאים בהמשך - הדרכת משפחות')">הדרכת משפחות<br><img src="https://via.placeholder.com/250x150"><p>חנק, חבלות, עילפון – להורים טריים</p></div>
+      <div class="card" onclick="alert('פרטים מלאים בהמשך - ועד בניין')">ועד בניין<br><img src="https://via.placeholder.com/250x150"><p>הכנה לתרחישים שכונתיים עם מדריך צמוד</p></div>
+    </div>
+  </section>
+
+  <section class="section before-after-section">
+    <div>
+      <h3>לפני</h3>
+      <div class="thought-box">
+        <div class="thought">מה עושים כשמישהו מתמוטט?</div>
+        <div class="thought">איך מגיבים לחנק?</div>
+        <div class="thought">מה עם עילפון פתאומי?</div>
+      </div>
+    </div>
+    <div class="arrow">↓</div>
+    <div>
+      <h3>אחרי</h3>
+      <div class="thought-box">
+        <div class="thought good">אני יודע לזהות סימנים מוקדמים</div>
+        <div class="thought good">אני בטוח בעצמי לתת עזרה</div>
+        <div class="thought good">אני שומר על קור רוח</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>מה נלמד בהדרכה?</h2>
+    <p>החייאה בסיסית | חנק מגוף זר | טביעות | עילפון | חבלות ופציעות | מניעת זיהומים ועוד</p>
+    <button class="scroll-to-form" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});">רוצה לבדוק הדרכה בקרוב</button>
   </section>
 </body>
 </html>
